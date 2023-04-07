@@ -1,21 +1,10 @@
 # Build the workflow project
 
+# Always prefer setuptools over distutils
 from setuptools import setup, Extension, find_packages
 import re
 import os
-
-
-# Getting description:
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-
-# Getting requirements:
-with open("requirements.txt") as requirements_file:
-    requirements = requirements_file.readlines()
-
-# Getting version:
-with open("./src/__init__.py") as init_file:
-    version = re.search("__version__ = \"(.*?)\"", init_file.read()).group(1)
+import pathlib
 
 
 """A setuptools based setup module.
@@ -23,10 +12,6 @@ See:
 https://packaging.python.org/guides/distributing-packages-using-setuptools/
 https://github.com/pypa/sampleproject
 """
-
-# Always prefer setuptools over distutils
-from setuptools import setup, find_packages
-import pathlib
 
 
 # Getting description:
@@ -224,6 +209,11 @@ setup(
 
 # RUN setup.py with below command
 # python3 setup.py sdist bdist_wheel
+
+
+# Check python distribution
+# check-wheel-contents C:\PACKAGE\dist
+
 
 # The Pypirc file stores the PyPi repository information
 # https://docs.python.org/2.5/dist/pypirc.html
