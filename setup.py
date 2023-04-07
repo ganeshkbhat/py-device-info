@@ -14,7 +14,7 @@ with open("requirements.txt") as requirements_file:
     requirements = requirements_file.readlines()
 
 # Getting version:
-with open("./taskcontrol/__init__.py") as init_file:
+with open("./src/__init__.py") as init_file:
     version = re.search("__version__ = \"(.*?)\"", init_file.read()).group(1)
 
 setup(
@@ -32,7 +32,7 @@ setup(
     download_url="https://pypi.org/project/pysysinfo/",
     packages=find_packages(),
     # package_dir={
-    #     # "": "taskcontrol",
+    #     # "": "pysysinfo",
     # },
     # package_data={
     #     # "some_dep": ["*.pxd", "*.pyi", "py.typed"],
