@@ -20,7 +20,7 @@ with open("./src/__init__.py") as init_file:
 setup(
     name='pysysinfo',
     version=version,
-    scripts=[],
+    scripts=["main.py"],
     author="Ganesh B",
     author_email="desktopcgi@gmail.com",
     maintainer="Ganesh B",
